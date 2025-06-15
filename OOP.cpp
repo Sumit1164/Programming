@@ -178,13 +178,18 @@ class Employee{
     void getId(void){
         cout<<"The Id of employee is: "<<id<<endl;
     }
-    void setSalary(void){
-        cout<<"Enter the Salary of employee: ";
-        cin >> salary;
-    }
-
 };
 int main() {
-    Employee emp[100];
+    // 1st way to create an array of objects
+    // Employee sumit, kashish, shubh, kajal;
+    // sumit.setId();
+    // sumit.getId();
+
+    // 2nd way to create an array of objects suppose we have 1000 employees so we don't want to create 1000 objects manually
+    Employee S7[5];
+    for (int i = 0; i < 5; i++){
+        S7[i].setId();
+        S7[i].getId();
+    }
     return 0;
 };
