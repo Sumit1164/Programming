@@ -90,8 +90,6 @@ int main(){
 //     return 0;
 // }
 
-
-
 // Lecture no 23
 
 // object memory allocation & using array in classes
@@ -118,7 +116,7 @@ int main(){
 //     {
 //         cout << "The Price of item with Id " << itemId[i] << " is " << itemPrice[i] << endl;
 //     }
-    
+
 // }
 // int main(){
 //     shop dukaan;
@@ -159,9 +157,7 @@ int main(){
 //     return 0;
 // }
 
-
 // Lecture no 25
-
 
 // array of objects
 // #include<iostream>
@@ -180,16 +176,52 @@ int main(){
 //     }
 // };
 // int main() {
-    // 1st way to create an array of objects
-    // Employee sumit, kashish, shubh, kajal;
-    // sumit.setId();
-    // sumit.getId();
+// 1st way to create an array of objects
+// Employee sumit, kashish, shubh, kajal;
+// sumit.setId();
+// sumit.getId();
 
-    // 2nd way to create an array of objects suppose we have 1000 employees so we don't want to create 1000 objects manually
+// 2nd way to create an array of objects suppose we have 1000 employees so we don't want to create 1000 objects manually
 //     Employee S7[5];
 //     for (int i = 0; i < 5; i++){
 //         S7[i].setId();
 //         S7[i].getId();
 //     }
 //     return 0;
-// }; 
+// };
+
+#include <iostream>
+using namespace std;
+class complex
+{
+    int a, b;
+
+public:
+    void setData(int x, int y)
+    {
+        a = x;
+        b = y;
+    }
+    void setDataBySum(complex o1, complex o2)
+    {
+        a = o1.a + o2.a;
+        b = o1.b + o2.b;
+    }
+    void printNumber()
+    {
+        cout<<"The complex number is: " << a << " + " << b << "i" << endl;
+    }
+};
+int main()
+{
+    complex c1, c2, c3;
+    c1.setData(1, 2);
+    c1.printNumber();
+
+    c2.setData(3, 4);
+    c2.printNumber();
+
+    c3.setDataBySum(c1, c2);
+    c3.printNumber();
+    return 0;
+}
