@@ -164,32 +164,32 @@ int main(){
 
 
 // array of objects
-#include<iostream>
-using namespace std;
-class Employee{
-    int id;
-    int salary;
-    public:
-    void setId(void){
-        salary = 212;
-        cout<<"Enter the Id of employee: ";
-        cin >> id;
-    }
-    void getId(void){
-        cout<<"The Id of employee is: "<<id<<endl;
-    }
-};
-int main() {
+// #include<iostream>
+// using namespace std;
+// class Employee{
+//     int id;
+//     int salary;
+//     public:
+//     void setId(void){
+//         salary = 212;
+//         cout<<"Enter the Id of employee: ";
+//         cin >> id;
+//     }
+//     void getId(void){
+//         cout<<"The Id of employee is: "<<id<<endl;
+//     }
+// };
+// int main() {
     // 1st way to create an array of objects
     // Employee sumit, kashish, shubh, kajal;
     // sumit.setId();
     // sumit.getId();
 
     // 2nd way to create an array of objects suppose we have 1000 employees so we don't want to create 1000 objects manually
-    Employee S7[5];
-    for (int i = 0; i < 5; i++){
-        S7[i].setId();
-        S7[i].getId();
-    }
-    return 0;
-}; 
+//     Employee S7[5];
+//     for (int i = 0; i < 5; i++){
+//         S7[i].setId();
+//         S7[i].getId();
+//     }
+//     return 0;
+// }; 
