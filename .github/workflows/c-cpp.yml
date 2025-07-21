@@ -13,10 +13,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    - name: Build with g++
-      run: g++ -std=c++17 -o foodDel foodDel.cpp
-    - name: Run executable
-      run: ./foodDel
     - name: configure
       run: ./configure
     - name: make
@@ -25,3 +21,4 @@ jobs:
       run: make check
     - name: make distcheck
       run: make distcheck
+      
