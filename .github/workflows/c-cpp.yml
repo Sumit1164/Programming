@@ -19,7 +19,6 @@ jobs:
         sudo apt-get install -y autoconf automake libtool build-essential
     - name: Change directory to source
       run: cd
-        your-project-subfolder
     - name: configure
       run: ./configure
     - name: make
