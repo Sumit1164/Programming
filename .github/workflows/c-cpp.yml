@@ -19,6 +19,10 @@ jobs:
       run: sudo apt-get install -y cmake
     - name: Install GCC
       run: sudo apt-get install -y build-essential
+    - name: Build with g++
+      run: g++ -std=c++17 -o foodDel foodDel.cpp
+    - name: Run executable
+      run: ./foodDel
     - name: configure
       run: ./configure
     - name: make
