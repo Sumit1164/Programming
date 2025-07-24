@@ -13,14 +13,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    - name: Install dependencies
-      run: sudo apt-get install -y autoconf automake libtool pkg-config
     - name: Install CMake
       run: sudo apt-get install -y cmake
-    - name: Install GCC
-      run: sudo apt-get install -y build-essential
-    - name: Build with g++
-      run: g++ -std=c++17 -o foodDel foodDel.cpp
     - name: Run executable
       run: ./foodDel
     - name: configure
