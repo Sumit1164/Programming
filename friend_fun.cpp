@@ -28,10 +28,20 @@ int main(){
 
     c2.setNum(3, 4);
     c2.printNum();
-    cout << "Complex numbers have been set and printed successfully." << endl;
 
     sum = sumComplex(c1, c2);
     sum.printNum();
 
     return 0; 
 }
+
+/*
+ Properties of friend functions
+
+ 1. Friend functions are not member functions of a class.
+ 2. They can access private and protected members of the class.
+ 3. They are usually used to perform operations on objects of the class.
+ 4. They are defined outside the class but can be declared inside the class.
+ 5. They can be called using the object of the class or directly.
+
+ */
