@@ -1,3 +1,4 @@
+/*
 #include<iostream>
 using namespace std;
 
@@ -21,7 +22,7 @@ Complex sumComplex(Complex o1, Complex o2){
 }
 
 
-int main(){ 
+int main(){
     Complex c1, c2, sum;
     c1.setNum(1, 2);
     c1.printNum();
@@ -32,10 +33,10 @@ int main(){
     sum = sumComplex(c1, c2);
     sum.printNum();
 
-    return 0; 
+    return 0;
 }
 
-/*
+
  Properties of friend functions
 
  1. Friend functions are not member functions of a class.
@@ -45,3 +46,8 @@ int main(){
  5. They can be called using the object of the class or directly.
 
  */
+
+// Lecture no 27
+
+// Friend Class and Member Friend Functions in C++
+
