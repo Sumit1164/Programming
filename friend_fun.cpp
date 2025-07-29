@@ -51,3 +51,48 @@ int main(){
 
 // Friend Class and Member Friend Functions in C++
 
+#include <iostream>
+using namespace std;
+
+class Complex;
+
+class Calculator{
+    public:
+    int add(int a, int b)
+    {
+        return a + b;
+    }
+    int sumRealComplex(Complex, Complex);
+};
+
+
+class Complex
+{
+    int a, b;
+    friend int Calculator :: sumRealComplex(Complex, Complex );
+
+    public:
+    void setNum(int n1, int n2)
+    {
+        a = n1;
+        b = n2;
+    }
+    void printNum()
+    {
+        cout << "Your number is: " << a << " + " << b << "i" << endl;
+    }
+};
+int Calculator :: sumRealComplex(Complex o1, Complex o2)
+{
+    return (o1.a + o2.a);
+}
+
+int main(){
+    Complex o1, o2;
+    o1.setNum(1, 2);
+    o2.setNum(3, 4);
+    Calculator calc;
+    int result = calc.sumRealComplex(o1, o2);
+    cout << "Sum of real parts: " << result << endl;
+    return 0;
+}
