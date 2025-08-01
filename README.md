@@ -65,11 +65,11 @@ Welcome to the ultimate C++ repository! This project is a comprehensive guide an
 - 📬 Contact
   - Have questions or suggestions?
 
-📧 Email: [sumittripathi8795@gmail.com]
+📧 Email: sumittripathi8795@gmail.com
 
-🐦 Twitter: [Sumit1164]
+🐦 Twitter: Sumit1164
 
-🔗 LinkedIn: [sumit tripathi]
+🔗 LinkedIn: sumit tripathi
 
 
 ---
