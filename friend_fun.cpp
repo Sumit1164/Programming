@@ -105,7 +105,7 @@ int main(){
 #include<iostream>
 using namespace std;
 
-class Y;
+class Y; // forword decleartion
 class X{
     int data;
     public:
