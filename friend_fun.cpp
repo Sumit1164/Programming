@@ -45,7 +45,7 @@ int main(){
  4. They are defined outside the class but can be declared inside the class.
  5. They can be called using the object of the class or directly.
 
- */
+
 
 // Lecture no 27
 
@@ -94,5 +94,49 @@ int main(){
     Calculator calc;
     int result = calc.sumRealComplex(o1, o2);
     cout << "Sum of real parts: " << result << endl;
+    return 0;
+}
+
+
+// Lecture no. 28
+
+ */
+
+#include<iostream>
+using namespace std;
+
+class Y;
+class X{
+    int data;
+    public:
+        void setValue(int value){
+            data = value;
+        }
+        friend void add(X, Y);
+};
+
+class Y
+{
+    int num;
+
+public:
+    void setValue(int value)
+    {
+        num = value;
+    }
+    friend void add(X, Y);
+};
+
+void add(X o1, Y o2) {
+    cout << "Summing of data X and Y object gives me "<<o1.data + o2.num;
+};
+
+int main(){
+    X sk;
+    sk.setValue(8);
+    Y ks;
+    ks.setValue(6);
+
+    add(sk, ks);
     return 0;
 }
