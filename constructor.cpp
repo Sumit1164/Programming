@@ -29,10 +29,11 @@ int main(){
 - Do not have return types and they can not return values
 - It can have default arguments
 - We can not refer to their address
-*/
 
-// Default and Parameterized Constructor
 
+// ----------->   Default and Parameterized Constructor
+
+// Default Constructor
 # include<iostream>
 using namespace std;
 class S7T{
@@ -52,3 +53,44 @@ int main(){
     K.printNum();
     return 0;
 }
+
+// Parameterized Constructor
+
+
+
+
+#include <iostream>
+using namespace std;
+class S7T
+{
+    int a, b;
+
+public:
+    S7T(int, int);
+    void printNum()
+    {
+        cout << "The sum of " << a << " + " << b << "i" << endl;
+    }
+};
+S7T ::S7T(int x, int y)
+{
+    a = x;
+    b = y;
+}
+int main()
+{
+    // Implicit call
+    S7T K(5, 8);
+
+    // Explicit call
+    S7T KS = S7T(5, 8);
+    K.printNum();
+    KS.printNum();
+    return 0;
+}
+
+
+// Point Constructor 
+
+
+*/
