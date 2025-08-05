@@ -90,10 +90,10 @@ int main()
 }
 
 
-// Point Constructor 
+// Point Constructor
 
 
-*/
+
 
 #include<iostream>
 using namespace std;
@@ -105,8 +105,8 @@ public:
         x = a;
         y = b;
     }
-    void displayPoint() { 
-        cout << "The point is (" << x << "," << y << ")" << endl; 
+    void displayPoint() {
+        cout << "The point is (" << x << "," << y << ")" << endl;
     }
 };
 int main(){
@@ -120,5 +120,34 @@ int main(){
 
 
 
+// Constructor Overloading
 
-// Constructor Overloading 
+*/
+
+
+#include<iostream>
+using namespace std;
+class S7K{
+    int a, b;
+public:
+    S7K(int x, int y){
+        a = x;
+        b = y;
+    }
+    S7K(int x){
+        a = x;
+        b = 0;
+    }
+    void printNum(){
+        cout << "The sum of " << a << " + " << b << "i" << endl;
+    }
+};
+int main(){
+    S7K s(4, 7);
+    s.printNum();
+    S7K k(7);
+    k.printNum();
+    return 0;
+}
+
+// Constructor with default arguments
