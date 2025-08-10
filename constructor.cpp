@@ -248,3 +248,10 @@ int main(){
 // Copy Constructor
 
 */
+
+#include<iostream>
+using namespace std;
+int main(){
+    cout << "Hello world!";
+    return 0;
+}
