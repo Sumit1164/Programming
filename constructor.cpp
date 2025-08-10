@@ -1,4 +1,7 @@
 /*
+
+    // Constructor Simple
+
 #include<iostream>
 using namespace std;
 
@@ -152,7 +155,7 @@ int main(){
 
 // Constructor with default arguments
 
-*/
+
 #include<iostream>
 using namespace std;
 class Simple{
@@ -173,3 +176,8 @@ int main(){
     s.printData();
     return 0;
 }
+
+
+// Dynamic Initialization of Object Using Constructor
+
+*/
