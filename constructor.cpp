@@ -249,9 +249,37 @@ int main(){
 
 */
 
+
+// Note: When no copy constructor is found, compiler supplies its own copy constructor 
+
 #include<iostream>
 using namespace std;
+
+class Number{
+    int a; 
+public:
+    Number(){
+        a = 0;
+    }
+    Number(int num){
+        a = num;
+    }
+    // Copy Constructor 
+    Number(Number & obj){
+        cout << "Copy Constructor called!!" << endl;
+        a = obj.a;
+    }
+    void display(){
+        cout << "The number for this object is " << a << endl;
+    }
+};
+
 int main(){
-    cout << "Hello world!";
+    Number x, y, z(57);
+    x.display();
+    y.display();
+    z.display();
+    Number z1(x);
+    z1.display();
     return 0;
 }
