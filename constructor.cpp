@@ -247,16 +247,13 @@ int main(){
 
 // Copy Constructor
 
-*/
-
-
-// Note: When no copy constructor is found, compiler supplies its own copy constructor 
+// Note: When no copy constructor is found, compiler supplies its own copy constructor
 
 #include<iostream>
 using namespace std;
 
 class Number{
-    int a; 
+    int a;
 public:
     Number(){
         a = 0;
@@ -264,7 +261,7 @@ public:
     Number(int num){
         a = num;
     }
-    // Copy Constructor 
+    // Copy Constructor
     Number(Number & obj){
         cout << "Copy Constructor called!!" << endl;
         a = obj.a;
@@ -281,5 +278,40 @@ int main(){
     z.display();
     Number z1(x);
     z1.display();
+    return 0;
+}
+
+
+// Destructor in C++
+*/
+
+#include<iostream>
+using namespace std;
+//   -> Destructor never takes an argument nor does it return any value
+int count = 0;
+class num{
+    public:
+        num()
+        {
+            count++;
+            cout << "This is the time when constructor is called for object number" << count << endl;
+        }
+
+        ~num(){
+            cout << "This is the time when my destructor is called for object number" << count << endl;
+            count--;
+        }
+};
+int main(){
+    cout << "We are inside our main function" << endl;
+    cout << "Creating first objects N1" << endl;
+    num N1;
+    {
+        cout << "Entering the block" << endl;
+        cout << "Creating two or more objects" << endl;
+        num N2, N3;
+        cout << "Exiting the block"<<endl;
+    }
+    cout << "Back to main" << endl;
     return 0;
 }
