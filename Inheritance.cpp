@@ -20,8 +20,43 @@
                                   - However, one of the parent classes is not a base class. 
 */
 
+
+
 #include<iostream>
 using namespace std;
+
+// Base Class
+class Emp{
+    int id;
+    
+    public:
+        float salary;
+        Emp(int intId){
+            id = intId;
+            salary = 8888.9;
+        }
+};
+
+/*
+//    ----------------------------->  Derived Class Syntax   <--------------------------------------------
+class {{derived-class-name}} : {{visibility-mode}} {{base-class-name}}{
+    class members/methods/etc...
+}
+
+----------> Note : Default visibility-mode is private.
+-----> Pubic visibility Mode : Public member of the base class become Public member of the derived class
+-----> Private visibility Mode : Public member of the base class become Private member of the derived class
+-----> Private members are never inherited derived class 
+*/
+class Engineer : Emp{
+    public:
+        int role = 57;
+}
+
 int main(){
+    Emp Sumit(1), Kasu(2);
+    cout << Sumit.salary << endl;
+    cout << Kasu.salary << endl;
+    Engineer skillK(1);
     return 0;
 }
