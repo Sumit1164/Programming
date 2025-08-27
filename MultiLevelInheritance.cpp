@@ -89,3 +89,78 @@ int main()
 
 */
 
+#include <iostream>
+using namespace std;
+
+// Base class 
+class Animal
+{
+private:
+    string name;
+
+public:
+    void setName(string n)
+    {
+        name = n;
+    }
+
+    string getName()
+    {
+        return name;
+    }
+};
+
+// Derived class from Animal 
+class Dog : public Animal
+{
+private:
+    string breed;
+
+public:
+    void setBreed(string b)
+    {
+        breed = b;
+    }
+
+    string getBreed()
+    {
+        return breed;
+    }
+};
+
+// Derived class from Dog 
+class Puppy : public Dog
+{
+private:
+    int age;
+
+public:
+    void setAge(int a)
+    {
+        age = a;
+    }
+
+    int getAge()
+    {
+        return age;
+    }
+
+    void displayInfo()
+    {
+        cout << "Name: " << getName() << endl;
+        cout << "Breed: " << getBreed() << endl;
+        cout << "Age: " << getAge() << " months" << endl;
+    }
+};
+
+int main()
+{
+    Puppy p;
+    p.setName("Bruno");
+    p.setBreed("Labrador");
+    p.setAge(3);
+
+    p.displayInfo();
+
+    return 0;
+}
