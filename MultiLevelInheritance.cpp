@@ -38,7 +38,7 @@ int main(){
 
 -----------------------> Another Example of multilevel inheritance <-------------------------------
 
-*/
+
 
 #include <iostream>
 using namespace std;
@@ -53,7 +53,7 @@ public:
     }
 };
 
-// Derived class from Animal 
+// Derived class from Animal
 class Dog : public Animal
 {
 public:
@@ -82,3 +82,10 @@ int main()
 
     return 0;
 }
+
+
+-------------> Multilevel inheritance using getter and setter functions <-------------
+
+
+*/
+
