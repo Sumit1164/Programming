@@ -1,18 +1,19 @@
+/*
 #include<iostream>
 using namespace std;
-/*
+
 -----> Syntax for inheriting in multiple inheritance
 
          class DerivedC : visibility-mode base1, visibility-mode base2{
              class body of class DerivedC;
          }
 
-*/
+
 
 class Base1{
 protected:
     int base1int;
-public: 
+public:
     void set_base1int(int a){
         base1int = a;
     }
@@ -48,4 +49,103 @@ int main(){
 }
 
 
-// Exercise on C++ inheritance 
+
+// Exercise on C++ inheritance
+
+create 2 classes : 1. SimpleCalculator - Take input of 2 numbers using a utility function and perform +, -, *, / and display the result using another function.2. ScientificCalculator - Take input of 2 numbers using a utility function and perform any four scientific operations of your choice and display the result using another function.create another class HybridCalculator and inherit it using these 2 classes : question1.what type of inheritance are you using ? question2.which mood inheritance are you using ? question3.create an object of HybridCalculator and display result of simple and scientific calculator.
+
+
+
+✅ Answers to Questions:
+Q1: What type of inheritance are you using?
+
+Multiple Inheritance — HybridCalculator inherits from both SimpleCalculator and ScientificCalculator.
+
+Q2: Which mode of inheritance are you using?
+
+Public Mode Inheritance — Both parent classes are inherited using the public keyword.
+
+Q3: Create an object of HybridCalculator and display result of simple and scientific calculator.
+
+*/
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+// SimpleCalculator Class
+class SimpleCalculator
+{
+protected:
+    double a, b;
+
+public:
+    void getSimpleInput()
+    {
+        cout << "Enter two numbers for Simple Calculator: ";
+        cin >> a >> b;
+    }
+
+    void displaySimpleOperations()
+    {
+        cout << "\n--- Simple Calculator Operations ---\n";
+        cout << "Addition: " << a + b << endl;
+        cout << "Subtraction: " << a - b << endl;
+        cout << "Multiplication: " << a * b << endl;
+        if (b != 0)
+            cout << "Division: " << a / b << endl;
+        else
+            cout << "Division: Cannot divide by zero.\n";
+    }
+};
+
+// ScientificCalculator Class
+class ScientificCalculator
+{
+protected:
+    double x, y;
+
+public:
+    void getScientificInput()
+    {
+        cout << "\nEnter two numbers for Scientific Calculator: ";
+        cin >> x >> y;
+    }
+
+    void displayScientificOperations()
+    {
+        cout << "\n--- Scientific Calculator Operations ---\n";
+        cout << "Power (x^y): " << pow(x, y) << endl;
+        if (x >= 0)
+            cout << "Square root of x: " << sqrt(x) << endl;
+        else
+            cout << "Square root: Invalid input (negative number)\n";
+
+        if (x > 0)
+            cout << "Log10 of x: " << log10(x) << endl;
+        else
+            cout << "Log10: Invalid input (non-positive number)\n";
+
+        cout << "Sine of x degrees: " << sin(x * M_PI / 180) << endl;
+    }
+};
+
+// HybridCalculator Class using Multiple Inheritance
+class HybridCalculator : public SimpleCalculator, public ScientificCalculator
+{
+    // No additional members needed
+};
+
+int main()
+{
+    HybridCalculator calc;
+
+    // Simple Calculator Operations
+    calc.getSimpleInput();
+    calc.displaySimpleOperations();
+
+    // Scientific Calculator Operations
+    calc.getScientificInput();
+    calc.displayScientificOperations();
+
+    return 0;
+}
