@@ -67,7 +67,7 @@ Public Mode Inheritance — Both parent classes are inherited using the public k
 
 Q3: Create an object of HybridCalculator and display result of simple and scientific calculator.
 
-*/
+
 #include <iostream>
 #include <cmath>
 using namespace std;
@@ -147,5 +147,44 @@ int main()
     calc.getScientificInput();
     calc.displayScientificOperations();
 
+    return 0;
+}
+
+
+
+// Ambiguity in Inheritance
+
+*/
+
+#include<iostream>
+using namespace std;
+class Base1{
+    public:
+        void greet(){
+            cout << "Hi, How are you?" << endl;
+        }
+};
+class Base2{
+    public:
+        void greet()
+        {
+            cout << "Hn, Kaise ho?" << endl;
+        }
+};
+class Derived : public Base1, public Base2{
+    int a;
+    // Ambiguity Resolution
+    public:
+        void greet(){
+            Base1::greet();
+        }
+};
+int main(){
+    Base1 objBase1;
+    Base2 objBase2;
+    objBase1.greet();
+    objBase2.greet();
+    Derived objDerived;
+    objDerived.greet();
     return 0;
 }
