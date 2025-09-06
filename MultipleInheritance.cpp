@@ -154,7 +154,7 @@ int main()
 
 // Ambiguity in Inheritance
 
-*/
+
 
 #include<iostream>
 using namespace std;
@@ -186,5 +186,14 @@ int main(){
     objBase2.greet();
     Derived objDerived;
     objDerived.greet();
+    return 0;
+}
+
+*/
+
+// Virtual Base Class in C++
+#include<iostream>
+using namespace std;
+int main(){
     return 0;
 }
