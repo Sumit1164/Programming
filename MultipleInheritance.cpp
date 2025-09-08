@@ -194,6 +194,62 @@ int main(){
 // Virtual Base Class in C++
 #include<iostream>
 using namespace std;
+class Student{
+    protected:
+        int roll_no;
+    public:
+        void setNum(int a){
+            roll_no = a;
+        }
+        void printNum(){
+            cout << "Your roll number is: " << roll_no << endl;
+        }
+};
+class Test : virtual public Student{
+    protected:
+        float maths, physics;
+    public:
+        void setMarks(float m, float p){
+            maths = m;
+            physics = p;
+        }
+        void printMarks(){
+            cout << "Your result is here: " << endl
+                 << "Maths: " << maths << endl
+                 << "Physics: " << physics << endl;
+        }
+};
+class Sports : public virtual Student{
+protected:
+    float score;
+
+public:
+    void setScore(float s)
+    {
+        score = s;
+    }
+    void printScore()
+    {
+        cout << "Your Yoga score is: " << score << endl;
+    }
+};
+class Result : public Test, public Sports{
+    private:
+        float total;
+    public:
+        void display(){
+            total = maths + physics + score;
+            printNum();
+            printMarks();
+            printScore();
+            cout << "Your total score is: " << total << endl;
+        }
+};
 int main(){
+    Result Sumit;
+    Sumit.setNum(4201);
+    Sumit.setMarks(90.0, 95.0);
+    Sumit.setScore(85.0);
+    Sumit.display();
     return 0;
 }
