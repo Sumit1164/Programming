@@ -1,6 +1,7 @@
 {
   "files.associations": {
-    "iostream": "cpp"
+    "iostream": "cpp",
+    "new": "cpp"
   },
   "makefile.configureOnOpen": false,
   "C_Cpp.errorSquiggles": "disabled"
