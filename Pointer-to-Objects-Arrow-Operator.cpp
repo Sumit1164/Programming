@@ -23,6 +23,9 @@ int main(){
 
 
 
-    // array of objects 
+    // array of objects
+    Complex *ptr1 = new Complex[4];
+    ptr1->setData(8, 9);
+    ptr1->getData();
     return 0;
 }
