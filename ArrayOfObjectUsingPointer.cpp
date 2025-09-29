@@ -18,9 +18,9 @@ int main(){
     // int *ptr = &size;
     Shop *ptr = new Shop[size];
     Shop *ptrTemp = ptr;
-    int s;
+    int s, i;
     float k;
-    for (int i = 0; i < size; i++)
+    for (i = 0; i < size; i++)
     {
         cout << "Id and price of item " << i + 1 << endl;
         cin >> s >> k;
@@ -28,7 +28,7 @@ int main(){
         ptr->setData(s, k);
         ptr++;
     }
-    for (int i = 0; i < size; i++)
+    for (i = 0; i < size; i++)
     {
         cout << "Item number: " << i + 1 << endl;
         ptrTemp->getData();
