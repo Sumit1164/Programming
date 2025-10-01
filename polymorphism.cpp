@@ -1,5 +1,6 @@
 
 // Pointer to Derived Classes in C++
+/*
 #include<iostream>
 using namespace std;
 class Base{
@@ -20,7 +21,7 @@ public:
 int main(){
 
     // Polymorphism means one name multiple forms
-    // Ex- Water -> (cold) -> Ice  ||  Water -> (hot) -> Air 
+    // Ex- Water -> (cold) -> Ice  ||  Water -> (hot) -> Air
     // Ex- Function overloading, Operator overloading, Virtual functions
 
     // About Polymorphism it's type and ex of polymorphism, Please checkout ->  Polymorphism.png
@@ -38,3 +39,62 @@ int main(){
     derived_C_pointer->display();
     return 0;
 }
+
+
+
+
+
+*/
+
+
+
+// Run time polymorphism
+
+#include <iostream>
+using namespace std;
+
+// Base class
+class Animal
+{
+public:
+    virtual void speak()
+    {
+        cout << "The animal makes a sound." << endl;
+    }
+};
+
+// Derived class
+class Dog : public Animal
+{
+public:
+    void speak() override
+    {
+        cout << "The dog barks." << endl;
+    }
+};
+
+// Another derived class
+class Cat : public Animal
+{
+public:
+    void speak() // "override" is optional
+    {
+        cout << "The cat meows." << endl;
+    }
+};
+
+int main()
+{
+    Animal *animal1 = new Dog(); // base class pointer to derived class
+    Animal *animal2 = new Cat();
+
+    animal1->speak(); // Output: The dog barks.
+    animal2->speak(); // Output: The cat meows.
+
+    // Clean up
+    delete animal1;
+    delete animal2;
+
+    return 0;
+}
+
