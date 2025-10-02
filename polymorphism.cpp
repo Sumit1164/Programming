@@ -40,13 +40,40 @@ int main(){
     return 0;
 }
 
+*/
 
+#include<iostream>
+using namespace std;
+class Base
+{
+public:
+    int varBase = 57;
+    virtual void display()
+    {
+        cout << "Displaying Base Class variable varBase " << varBase << endl;
+    }
+};
+class Derived : public Base
+{
+public:
+    int varDer = 75;
+    void display()
+    {
+        cout << "Displaying Base Class variable varBase " << varBase << endl;
+        cout << "Displaying Derived Class variable varDer " << varDer << endl;
+    }
+};
+int main(){
+    Base *base_Class_pointer;
+    Base obj_Base;
+    Derived obj_Derived;
+    base_Class_pointer = &obj_Derived;
+    base_Class_pointer->display();
 
+    return 0;
+}
 
-
-
-
-
+/*
 
 // Run time polymorphism
 
@@ -100,7 +127,7 @@ int main()
 
 
 
-*/
+
 
 // Compile Time Polymorphism
 
@@ -140,3 +167,4 @@ int main()
     cout << "Sum of 1.5 and 2.5: " << calc.add(4.5f, 2.5f) << endl;
     return 0;
 }
+    */
