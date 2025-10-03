@@ -61,3 +61,14 @@ int main(){
     tut[1]->display();
     return 0;
 }
+
+/*
+// Rules for virtual function
+
+1. They can not be static.
+2. They are accessed by object pointers.
+3. Virtual function can be a friend of another class.
+4. Virtual function in base class might not be used.
+5. If a virtual function is defined in a base class, there is no necessity of redefining it in the derived class.
+
+*/
