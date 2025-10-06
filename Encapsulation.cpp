@@ -50,6 +50,9 @@ int main()
 // For example, think of a company with different departments—finance, sales, and accounts.Each department handles its own tasks and data.The finance department deals only with financial records, and the sales department handles only sales.Just like that, in programming, each class manages its own data and operations, keeping everything separate and protected.That's encapsulation.
 
 // Advantages and Disadvantages of Encapsulation:
+/*
 1. Data Hiding                               1. Increased Code Complexity
 2. Improved Maintainability                  2. Performance Overhead
 3. Reusability                               3. Overuse of Accessors Can Break Encapsulation
+4. Flexibility and Control                   4. Learning Curve
+*/
