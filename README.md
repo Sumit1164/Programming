@@ -21,7 +21,8 @@ Welcome to the ultimate C++ repository! This project is a comprehensive guide an
   - Inheritance 👨‍👧
   1. Single Inheritance
   2. Multilevel Inheritance
-  3. 
+  3. Multiple Inheritance
+  4. 
   - Polymorphism 🔁
   - Encapsulation & Abstraction 🛡️
 - 🧠 **Advanced Topics**
