@@ -24,7 +24,10 @@ Welcome to the ultimate C++ repository! This project is a comprehensive guide an
   3. Multiple Inheritance
   4. 
   - Polymorphism 🔁
-  - Encapsulation & Abstraction 🛡️
+    1. Run Time Polymorphism
+    2. Compile Time Polymorphism
+  - Encapsulation
+  -  Abstraction 🛡️
 - 🧠 **Advanced Topics**
   - Templates 📦
   - STL (Standard Template Library)
