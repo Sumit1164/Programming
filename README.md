@@ -22,7 +22,7 @@ Welcome to the ultimate C++ repository! This project is a comprehensive guide an
   1. Single Inheritance
   2. Multilevel Inheritance
   3. Multiple Inheritance
-  4. 
+  4. Hierarchical Inheritance
   - Polymorphism 🔁
     1. Run Time Polymorphism
     2. Compile Time Polymorphism
