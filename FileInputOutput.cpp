@@ -32,7 +32,7 @@ int main(){
     return 0;
 }
 
-*/
+
 
 int main(){
     ofstream out("FileInputOutput.txt");
@@ -45,5 +45,31 @@ int main(){
     string content;
     in >> content;
     cout << "The file of this file is " << content;
+    return 0;
+}
+
+
+*/
+
+int main(){
+    ofstream out;
+    out.open("FileInputOutput.txt");
+    out << "This is me\n";
+    out << "This is me alsoo\n";
+    out << "I'm an software engineer";
+    out.close();
+
+    ifstream in;
+    string st;
+    in.open("FileInputOutput.txt");
+    // in >> st;
+    // cout << st;
+    
+    while (in.eof()==0)          //eof   -> end of file
+    {
+        getline(in, st);
+        cout << st << endl;
+    }
+    in.close();
     return 0;
 }
