@@ -3,7 +3,7 @@
 using namespace std;
 
 template<class T>
-class Sumit{
+class Sumit{ 
     public:
     T data;
     Sumit(T a){
