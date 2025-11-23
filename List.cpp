@@ -42,9 +42,12 @@ int main(){
     list<float> list2(3); // Empty list of size 3
     list<float>::iterator itr;
     itr = list2.begin()
-    list2.push_back(7);
-    list2.push_back(5);
-    list2.push_back(75);
+    *itr = 7;
+    itr++;
+    *itr = 5;
+    itr++;
+    *itr = 75;
+    itr++;
     display(list2);
 
     return 0;
