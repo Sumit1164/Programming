@@ -2,32 +2,51 @@
 
 #include<iostream>
 #include<list>
-
-// void display(list<int> &lst){
-//     list<int>::iterator it;
-    
-// }
 using namespace std;
+
+//* Way 3rd to print the list
+void display(list <int> &lst1){
+    list<int> :: iterator it;
+    for (it = lst1.begin(); it != lst1.end(); it++){
+        cout << *it << endl;
+    }
+}
 int main(){
     list<int> list1;   // List of 0 length
-    // list<float> list2(5); // Empty list of size 5
     list1.push_back(5);
     list1.push_back(7);
     list1.push_back(57);
 
-    // list<int>::iterator iter;
-    // iter = list1.begin();
-    // cout << *iter << " ";
-    // iter++;
-    // cout << *iter << " ";
-    // iter++;
-    // cout << *iter << " ";
+    //! Way 1st to print the list
+    /*
+    list<int>::iterator iter;
+    iter = list1.begin();
+    cout << *iter << " ";
+    iter++;
+    cout << *iter << " ";
+    iter++;
+    cout << *iter << " ";
+    */
 
+    //! Way 2nd to print the list
+    /*
     for (int x : list1)
     {
         cout << x << endl;
     }
-    
+    */
+
+    //! Way 3rd to print the list
+    display(list1);
+
+    list<float> list2(3); // Empty list of size 3
+    list<float>::iterator itr;
+    itr = list2.begin()
+    list2.push_back(7);
+    list2.push_back(5);
+    list2.push_back(75);
+    display(list2);
+
     return 0;
 }
 
