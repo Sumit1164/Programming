@@ -10,6 +10,7 @@ void display(list <int> &lst1){
     for (it = lst1.begin(); it != lst1.end(); it++){
         cout << *it << endl;
     }
+    cout << endl;
 }
 int main(){
     list<int> list1;   // List of 0 length
@@ -39,16 +40,23 @@ int main(){
     //! Way 3rd to print the list
     display(list1);
 
-    list<float> list2(3); // Empty list of size 3
-    list<float>::iterator itr;
-    itr = list2.begin()
-    *itr = 7;
+    //? Delete an element from the list at the end
+    list1.pop_back();
+    //? Delete an element from the list at the front
+    list1.pop_front();
+    display(list1);
+
+    //* Create another list 
+    list<int> list2(3); // Empty list of size 3
+    list<int>::iterator itr;
+    itr = list2.begin();
+    *itr = 7.5;
     itr++;
-    *itr = 5;
+    *itr = 5.7;
     itr++;
-    *itr = 75;
+    *itr = 7.5;
     itr++;
-    display(list2);
+    // display(list2);
 
     return 0;
 }
