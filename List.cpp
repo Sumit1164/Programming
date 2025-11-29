@@ -17,6 +17,7 @@ int main(){
     list1.push_back(5);
     list1.push_back(7);
     list1.push_back(57);
+    list1.push_back(4);
 
     //! Way 1st to print the list
     /*
@@ -38,26 +39,41 @@ int main(){
     */
 
     //! Way 3rd to print the list
-    display(list1);
+    // display(list1);
 
     //? Delete an element from the list at the end
-    list1.pop_back();
+    // list1.pop_back();
     //? Delete an element from the list at the front
-    list1.pop_front();
+    // list1.pop_front();
+    //? Delete an element from middle in the list
+    // list1.remove(4);
+
+
+    //* Sorting the list
+    // list1.sort();
     display(list1);
 
     //* Create another list 
     list<int> list2(3); // Empty list of size 3
     list<int>::iterator itr;
     itr = list2.begin();
-    *itr = 7.5;
+    *itr = 4.5;
     itr++;
     *itr = 5.7;
     itr++;
     *itr = 7.5;
     itr++;
-    // display(list2);
+    display(list2);
 
+
+    //? Merging two or more lists
+    // list1.merge(list2);
+    // cout << "After merging the list: "<<endl ;
+
+
+    //? Reversing the list
+    // list1.reverse();
+    display(list1);
     return 0;
 }
 
