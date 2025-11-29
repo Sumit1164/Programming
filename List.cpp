@@ -47,7 +47,10 @@ int main(){
     list1.pop_front();
     //? Delete an element from middle in the list
     list1.remove(4);
-
+    //? Remove_if method
+    list<int> lst = {1, 2, 3, 4, 5};
+    lst.remove_if([](int x){ return x % 2 == 0; });
+    display(lst);
 
     //* Sorting the list
     list1.sort();
